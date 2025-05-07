@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "../../globals.css";
+.mainLayout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .contentArea {
+    flex: 1;
+    padding: 1.5rem;
+    margin-left: 250px; /* Sidebar width */
+    transition: margin-left 0.3s ease;
+  }
+  
+  .contentAreaFull {
+    margin-left: 64px; /* Collapsed sidebar width */
+  }
+  
+  .pageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  
+  .pageTitle {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin: 0;
+  }
+  
+  .breadcrumbs {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    margin-bottom: 0.5rem;
+  }
+  
+  .breadcrumbsLink {
+    color: var(--gray-600);
+    text-decoration: none;
+  }
+  
+  .breadcrumbsLink:hover {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+  
+  .breadcrumbsDivider {
+    margin: 0 0.5rem;
+  }
+  
+  .section {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--gray-800);
+  }
+  
+  @media (max-width: 768px) {
+    .contentArea {
+      margin-left: 0;
+      padding: 1rem;
+    }
+    
+    .pageHeader {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
